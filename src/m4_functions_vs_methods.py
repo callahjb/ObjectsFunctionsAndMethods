@@ -9,7 +9,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 ########################################################################
 #
-# TODO: 2.
+# done: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -83,6 +83,9 @@ def main():
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
+    try_methods()
+    try_functions()
+    try_methods_and_functions()
 
     window.close_on_mouse_click()
 
@@ -172,10 +175,19 @@ def try_methods():
       -- backward  100 units
     """
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # done: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
+
+    newturtle = rg.SimpleTurtle()
+    newturtle.pen = rg.Pen('brown',5)
+
+    newturtle.forward(150)
+    newturtle.left(90)
+    newturtle.forward(50)
+    newturtle.backward(100)
+
 
 
 def try_functions():
@@ -186,7 +198,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # done: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -198,6 +210,9 @@ def try_functions():
     #
     ####################################################################
 
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200,0,0)
+    jump_and_move_turtle(-50,50,100,100)
 
 def try_methods_and_functions():
     """
@@ -206,13 +221,13 @@ def try_methods_and_functions():
 
     Then makes the SimpleTurtle do the following (in the order listed):
 
-      1. Go  backward  150 units.
+      1. Go  backward  150 units. X
 
-      2. Change its speed to 1 (slowest).
+      2. Change its speed to 1 (slowest). X
          Draw 2 squares whose size (width and height) are 100,
          each "twisted" from the previous by 30 degrees.
 
-      3. Change its speed to 5 (faster).
+      3. Change its speed to 5 (faster). X
          Change its Pen's color to 'red'.
          Draw 10 squares whose size (width and height) are 50,
          each "twisted" from the previous by 15 degrees.
@@ -232,7 +247,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # done: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -242,6 +257,30 @@ def try_methods_and_functions():
     # function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ####################################################################
+
+    joey = rg.SimpleTurtle()
+    joey.pen = rg.Pen('blue',5)
+
+    joey.backward(150)
+    joey.speed = 1
+
+    draw_many_squares(joey,2,100,30)
+
+    joey.speed = 5
+    joey.pen = rg.Pen('red',5)
+
+    draw_many_squares(joey, 10, 50, 16)
+
+    joey.speed = 100
+    joey.pen = rg.Pen('red',35)
+
+    draw_many_squares(joey, 8, 300, 60)
+
+    joey.pen = rg.Pen('black',3)
+
+    joey.backward(300)
+    joey.draw_circle(30)
+    joey.draw_square(50)
 
 
 # ----------------------------------------------------------------------
