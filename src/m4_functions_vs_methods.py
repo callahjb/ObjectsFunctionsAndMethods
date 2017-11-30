@@ -87,7 +87,7 @@ def main():
     try_functions()
     try_methods_and_functions()
 
-
+    window.close_on_mouse_click()
 
 
 def jump_and_move_turtle(x1, y1, x2, y2):
